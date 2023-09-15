@@ -81,9 +81,7 @@
     }
   }
   @media (max-width: 768px) {
-    .heading {
-        margin-top: 6rem;
-    }
+    
     .heading>:nth-child(1){
         font-size: 35px;
         font-weight: 700;
