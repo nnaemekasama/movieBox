@@ -1,0 +1,51 @@
+.header-wrapper {
+    color: white;
+    z-index: 1;
+    top: 0;
+}
+.navbar-container {
+  gap: 3rem;
+}
+.navbar-menu {
+   gap: 1rem;
+}
+.navbar-logo{
+    gap: 1rem;
+    
+}
+
+.nav-btn{
+    position: relative;
+}
+.nav-btn>:nth-child(2){
+    position: absolute;
+    left: 15;
+}
+.heading {
+    margin-top: 9rem;
+    max-width: 500px;
+    gap: 1rem;
+    text-align: left;
+    max-width: 404px;
+}
+.heading>:nth-child(1){
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+}
+.heading>:nth-child(3){
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.heading-ratings {
+    gap: 2rem;
+}
+
+.heading-ratings>:nth-child(n){
+    gap: .5rem;
+}
+.play-btn {
+    gap: 0.5rem;
+}

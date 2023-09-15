@@ -1,0 +1,50 @@
+.movie-card {
+  flex: 1;
+  max-width: 250px;
+}
+
+.card-movie-title {
+    
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.44px;
+    color: var(--gray900);
+  }
+  .card-image-container {
+    position: relative;
+    width: fit-content;
+  }
+  .card-heart {
+    color:  var(--gray300);
+    background-color: var(--gray400);
+    z-index: 10;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border-radius: 100%;
+    border: 5px solid var(--gray400);
+  }
+  .heart-fav {
+    color: red;
+  }
+ 
+  .card-body>:nth-child(n) {
+    margin-top: 1rem;
+  }
+  
+  /* for category and time */
+  .card-text  {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15.62px;
+    color: var(--gray400);
+  }
+  .card-movie-rating{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    color: var(--gray900); 
+  }
+ .card-movie-rating > :nth-child(n){
+  gap: 0.5rem;
+ }

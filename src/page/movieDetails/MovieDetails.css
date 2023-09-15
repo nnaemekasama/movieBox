@@ -1,0 +1,235 @@
+.movie-details-container {
+   display: flex;
+}
+
+.details-container {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.details-image {
+    position: relative;
+}
+.watch-trailer-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    z-index: 2;
+}
+.watch-trailer-container >:nth-child(2){
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #E8E8E8;
+
+
+}
+.trailer-play {
+    position: relative;
+}
+.trailer-play >:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+}
+
+.img_backdrop {
+    width: 100%;
+    height: 449px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+
+.details-info {
+    margin-top: 1rem;
+    gap: 100px; 
+    display: flex;
+
+}
+.details-info-left{
+    flex: 4;
+}
+.details-info-right{
+    flex: 1;
+}
+
+.details-info-head {
+    gap: .5rem;
+    font-family: Poppins;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+    font-family: Poppins;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+    font-family: Poppins;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.genre{
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left;
+    border-radius: 30px;
+    padding: 3px;
+    border: 1px solid #F8E7EB
+
+}
+.details-info-overview {
+    margin-top: 1rem;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+.movie-directors {
+    margin-top: 1rem;
+    gap: 1.5rem;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--rose700)
+}
+.movie-detail-top-rated {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.movie-detail-top-rated > :nth-child(1){
+   
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    flex: 2;
+}
+.movie-detail-top-rated > :nth-child(2){
+    color:var(--rose700) ;
+    background: white;
+    gap: 3rem;
+    padding: 0.6rem 1rem;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    border: 1px solid #C7C7C7;
+    flex: 4;
+
+}
+.details-info-right>:nth-child(n){
+    margin-bottom: 3rem;
+}
+
+.rating-votes {
+    display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.info-right-buttons {
+    margin-top: 1rem;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+.info-right-buttons >:nth-child(1) {
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 100%;
+
+}
+.info-right-buttons >:nth-child(2) {
+    color: var(--rose700);
+    background: white;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 10px;
+    letter-spacing: 0em;
+    text-align: left;
+    border: 1px solid #BE123C;
+    width: 100%;
+}
+
+.now-showing {
+    margin-top: 1rem;
+    position: relative;
+    border-radius: 20px;
+    width: 100%;
+    
+}
+.now-showing > :nth-child(1){
+   filter: blur(10%);
+   filter: brightness(60%);
+    z-index: -55;
+}
+.now-showing > :nth-child(2) {
+    gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #E8E8E8;
+    padding: .5rem;
+}
+
+
+/* Media queries */
+@media (max-width: 768px) {
+    .details-info {
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .details-info-head {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .movie-detail-top-rated {
+        display: flex;
+        justify-content: center;
+    }
+    .rating-votes {
+        justify-content: flex-start;
+    }
+  }
+  

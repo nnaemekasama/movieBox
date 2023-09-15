@@ -1,0 +1,27 @@
+.search-bar {
+    border: 1px solid var(--gray300);
+    padding: 0 1rem;
+    flex: 1;
+    max-width: 525px;
+}
+.search-bar:nth-child(2) {
+    cursor: pointer;
+}
+.search-bar > input{
+    border: none; /* Remove the input border */
+    background: transparent; /* Make the input background transparent */
+    flex: 1; /* Allow the input to grow to fill available space */
+    padding: 5px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: white; 
+   
+}
+.search-bar > input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: white;
+}

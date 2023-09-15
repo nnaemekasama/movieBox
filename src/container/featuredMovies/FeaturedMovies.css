@@ -1,0 +1,24 @@
+.featured-section {
+    margin-top: 3rem;
+    
+}
+.featured-header {
+    padding-bottom: 2.5rem;
+}
+.featured-header >:nth-child(1){
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+}
+.featured-header >:nth-child(2){
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--rose700);
+}
+
+.featured-list {
+
+    gap: 50px;
+    
+}
