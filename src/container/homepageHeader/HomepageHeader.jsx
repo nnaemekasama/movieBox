@@ -1,22 +1,26 @@
 import React, { useEffect, useState } from "react"
 import "./HomepageHeader.css"
 import Header from "../../components/header/Header"
-import FeaturedMovies from "../featuredMovies/FeaturedMovies"
+import Loader from "../../components/loader/Loader"
+import Message from "../../components/message/Message"
 
 const HomepageHeader = () => {
   const [movieData, setMovieData] = useState([])
   const [movieBackground, setMovieBackground] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState("")
 
   useEffect(() => {
     const fetchMovie = async () => {
       try {
         const apiKey = import.meta.env.VITE_REACT_APP_API_KEY
         const res = await fetch(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
+          `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US`
         )
         if (!res.ok) throw new Error("Something went wrong!")
         const { results } = await res.json()
         const randomMovie = results[Math.floor(Math.random() * results.length)]
+        setIsLoading(false)
         setMovieData(randomMovie)
 
         setMovieBackground(
@@ -25,7 +29,8 @@ const HomepageHeader = () => {
           }?t=${Date.now()}`
         )
       } catch (error) {
-        console.log(error)
+        setIsLoading(false)
+        setError(error?.error)
       }
     }
     fetchMovie()
@@ -45,13 +50,19 @@ const HomepageHeader = () => {
 
   return (
     <section className="homepage-header">
-      <div style={backgroundStyle} className="homepage-header-wrapper">
-        <Header
-          imbdRating={movieData.vote_average}
-          movieTitle={movieData.title}
-          overview={movieData.overview}
-        />
-      </div>
+      {isLoading ? (
+        <Loader />
+      ) : error ? (
+        <Message message={error} />
+      ) : (
+        <div style={backgroundStyle} className="homepage-header-section">
+          <Header
+            imbdRating={movieData.vote_average}
+            movieTitle={movieData.title}
+            overview={movieData.overview}
+          />
+        </div>
+      )}
     </section>
   )
 }

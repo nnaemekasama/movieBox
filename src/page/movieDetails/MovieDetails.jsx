@@ -3,10 +3,15 @@ import "./MovieDetails.css"
 import { useParams } from "react-router-dom"
 import { AiOutlineUnorderedList } from "react-icons/ai"
 import { Sidebar } from "../../components/sidebar/Sidebar"
+import Loader from "../../components/loader/Loader"
+import Message from "../../components/message/Message"
 
 const apiKey = import.meta.env.VITE_REACT_APP_API_KEY
 const MovieDetails = () => {
   const [movieDetail, setMovieDetail] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState("")
+
   const { id } = useParams()
   console.log(id)
 
@@ -18,9 +23,11 @@ const MovieDetails = () => {
         )
         if (!res.ok) throw new Error("Something went wrong")
         const data = await res.json()
+        setIsLoading(false)
         setMovieDetail(data)
       } catch (error) {
-        console.log(error)
+        setIsLoading(false)
+        setError(error?.error)
       }
     }
 
@@ -30,8 +37,10 @@ const MovieDetails = () => {
   return (
     <section className="movie-details-container">
       <Sidebar />
-      {!movieDetail ? (
-        <div>Loading</div>
+      {isLoading ? (
+        <Loader />
+      ) : error ? (
+        <Message />
       ) : (
         <div className=" details-container">
           <div className="details-image">
@@ -57,14 +66,14 @@ const MovieDetails = () => {
                   {movieDetail.release_date?.split("-")[0]} .
                 </p>
                 <p>{`${movieDetail.adult ? "Adult" : "PG-13"}`} .</p>
-                <p>{movieDetail.runtime} mins .</p>
+                <p data-testid="movie-runtime">{movieDetail.runtime} mins .</p>
 
                 {movieDetail?.genres
                   ?.map((obj) => obj?.name)
                   ?.map((e, i) => {
                     return (
                       <div className="genre" key={i}>
-                        <p>{e}</p>
+                        <span>{e}</span>
                       </div>
                     )
                   })}

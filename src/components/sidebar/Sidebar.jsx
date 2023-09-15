@@ -30,6 +30,9 @@ export function Sidebar({}) {
         <div className="flexColCenter sidebar-box">
           <p>Play movie quizes and earn free tickets</p>
           <p>50k people are playing now</p>
+          <div className="start-playing">
+            <p>Start Playing</p>
+          </div>
         </div>
         <div className="flexSB">
           <img src="/Logout.svg" alt="" />

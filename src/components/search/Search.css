@@ -3,6 +3,7 @@
     padding: 0 1rem;
     flex: 1;
     max-width: 525px;
+    min-width: 250px;
 }
 .search-bar:nth-child(2) {
     cursor: pointer;

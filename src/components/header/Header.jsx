@@ -21,25 +21,24 @@ const Header = ({ movieTitle, imbdRating, overview }) => {
           </div>
         </div>
       </div>
-      <div className="flexStart">
-        <div className="flexColStart heading">
-          <h2>{movieTitle}</h2>
-          <div className="flexCenter heading-ratings">
-            <div className="flexSB">
-              <img src="./Imbd.svg" alt="" />
-              <p className="whiteText">{Number(imbdRating).toFixed(1)}</p>
-            </div>
-            <div className="flexSB">
-              <img src="./Rottentom.svg" alt="" />
-              <p className="whiteText">97%</p>
-            </div>
+
+      <div className="flexColStart heading">
+        <h2>{movieTitle}</h2>
+        <div className="flexCenter heading-ratings">
+          <div className="flexSB">
+            <img src="./Imbd.svg" alt="" />
+            <p className="whiteText">{Number(imbdRating).toFixed(1)}</p>
           </div>
-          <p>{overview}</p>
-          <button className="flexCenter button play-btn">
-            <img src="./Play.svg" alt="" />
-            <p>Watch Trailer</p>
-          </button>
+          <div className="flexSB">
+            <img src="./Rottentom.svg" alt="" />
+            <p className="whiteText">97%</p>
+          </div>
         </div>
+        <p>{overview}</p>
+        <button className="flexCenter button play-btn">
+          <img src="./Play.svg" alt="" />
+          <p>Watch Trailer</p>
+        </button>
       </div>
     </div>
   )

@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import MovieDetails from "./page/movieDetails/MovieDetails"
 import Home from "./page/Home"
+import Footer from "./components/footer/Footer"
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/movie/:id" element={<MovieDetails />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   )

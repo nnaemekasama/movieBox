@@ -63,7 +63,7 @@ export const Genre = ({ genreId }) => {
       try {
         const apiKey = import.meta.env.VITE_REACT_APP_API_KEY
         const res = await fetch(
-          `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}`
+          `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`
         )
         if (!res.ok) throw new Error("Something went wrong!")
         const { genres } = await res.json()

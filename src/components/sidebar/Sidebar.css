@@ -71,6 +71,26 @@ linear-gradient(0deg, rgba(248, 231, 235, 0.4), rgba(248, 231, 235, 0.4));
     color: #666666;
 }
 
+.start-playing {
+    margin-top: 1rem;
+    width: 112px;
+    height: 30px;
+    border-radius: 30px;
+    background: #BE123C33;
+    padding: 5px;
+    border: 1px solid black;
+}
+.start-playing>p {
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: var(--rose700);
+
+}
+
 @media (max-width: 768px) {
     .sidebar{
         display: none;
