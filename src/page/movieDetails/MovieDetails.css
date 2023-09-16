@@ -20,7 +20,7 @@
 }
 .watch-trailer-container >:nth-child(2){
     font-family: Poppins;
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 38px;
     letter-spacing: 0em;
@@ -46,6 +46,7 @@
     object-fit: cover;
     border-radius: 10px;
     z-index: -1;
+    filter: brightness(80%);
 }
 
 
@@ -88,7 +89,7 @@
 .details-info-overview {
     margin-top: 1rem;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0em;
@@ -99,7 +100,7 @@
     margin-top: 1rem;
     gap: 1.5rem;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0em;
@@ -114,7 +115,7 @@
     flex-wrap: wrap;
 }
 .movie-detail-top-rated > :nth-child(1){
-   
+    padding: 0.6rem 1rem;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0em;

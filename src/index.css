@@ -77,6 +77,7 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .flexColSB {
   display: flex;
@@ -150,11 +151,4 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
-  .primaryText {
-    font-size: 1.5rem;
-  }
-  .orangeText {
-    font-size: 1.2rem;
-  }
-}
+

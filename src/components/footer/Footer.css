@@ -9,7 +9,6 @@
 
 .social-icons {
     gap: 4rem;
-    
 }
 .footer-container>:nth-child(2){
     justify-content: space-between;
@@ -25,4 +24,10 @@
     font-weight: 700;
     font-size: 14px;
     line-height: 23.44px;
+}
+@media(max-width: 768px) {
+    .social-icons{
+        gap: 1rem;
+        justify-content: flex-start;
+    }
 }
