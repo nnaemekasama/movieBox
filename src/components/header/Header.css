@@ -67,7 +67,7 @@
       display: none;
     }
     .heading {
-        margin-top: 3rem;
+        margin-top: 5rem;
     }
     .heading>:nth-child(1){
       font-size: 40px;
