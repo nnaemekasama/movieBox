@@ -31,7 +31,7 @@ const Card = ({ movie }) => {
         className="card-body"
       >
         <p data-testid="movie-release-date" className="card-text">
-          {movie.release_date}
+          USA, {movie.release_date.split("-")[0]}
         </p>
         <p className="card-movie-title" data-testid="movie-title">
           {movie.title}
