@@ -3,8 +3,9 @@ import { useState } from "react"
 import { useParams } from "react-router-dom"
 import Card from "../../components/card/Card"
 import "./SearchQueryResults.css"
+import "./SearchQueryResults.css"
 
-const SearchQueryResults = () => {
+const SearchQueryResuts = () => {
   const { query } = useParams()
   const [searchResults, setSearchResults] = useState([])
 
@@ -43,4 +44,4 @@ const SearchQueryResults = () => {
   )
 }
 
-export default SearchQueryResults
+export default SearchQueryResuts
