@@ -42,9 +42,14 @@ const FeaturedMovies = () => {
             <a href="">See more {">"} </a>
           </div>
 
-          <div className="flexSB featured-list">
+          <div className="featured-list">
             {featuredMovies.map((movie, i) => (
-              <Card key={i} movie={movie} />
+              <Card
+                key={i}
+                movie={movie}
+                imbd={`./Imbd.svg`}
+                rt={`./Rottentom.svg`}
+              />
             ))}
           </div>
         </div>

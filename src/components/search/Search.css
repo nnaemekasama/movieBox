@@ -1,7 +1,7 @@
 .search-bar {
     border: 1px solid var(--gray300);
     padding: 0 1rem;
-    flex: 1;
+    flex: 2;
     max-width: 525px;
     min-width: 250px;
 }

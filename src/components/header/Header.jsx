@@ -7,14 +7,14 @@ const Header = ({ movieTitle, imbdRating, overview }) => {
   return (
     <div className="header-wrapper paddings  innerWidth">
       <div className="flexSB navbar-container">
-        <Link className="flexSB navbar-logo" to="/">
+        <Link className="navbar-logo" to="/">
           <img src="./tv.svg" alt="" width={40} height={40} />
-          <h3>MovieBox</h3>
+          <p>MovieBox</p>
         </Link>
 
         <Search />
         <div className="flexSB navbar-menu">
-          <span>Sign in</span>
+          <p>Sign in</p>
           <div className="flexCenter nav-btn">
             <img src="./Ellipse.svg" alt="" width={30} height={30} />
             <img src="./Icon.svg" alt="" />

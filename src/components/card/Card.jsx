@@ -3,7 +3,7 @@ import "./Card.css"
 import { AiFillHeart } from "react-icons/ai"
 import { Link } from "react-router-dom"
 
-const Card = ({ movie }) => {
+const Card = ({ movie, imbd, rt }) => {
   const [isclicked, setIsClicked] = useState(false)
 
   const clicked = () => {
@@ -38,11 +38,11 @@ const Card = ({ movie }) => {
         </p>
         <div className="flexSB card-movie-rating">
           <div className="flexStart">
-            <img src="./Imbd.svg" alt="" width={35} />
+            <img src={imbd} alt="" width={35} />
             <p>{movie.vote_average} / 10</p>
           </div>
           <div className="flexStart">
-            <img src="./Rottentom.svg" alt="" width={16} />
+            <img src={rt} alt="" width={16} />
             <p>97%</p>
           </div>
         </div>

@@ -12,13 +12,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
-font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
 
 .app {
   max-width: 1440px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 a {
   color: inherit;
@@ -141,7 +145,7 @@ ul {
 
 @media (min-width: 640px) {
   .paddings {
-    padding: 0.5rem 4rem ;
+    padding: 0.5rem 3rem ;
   }
 }
 
