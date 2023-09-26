@@ -2,8 +2,9 @@ import React, { useEffect } from "react"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import Card from "../../components/card/Card"
+import "./SearchQueryResults.css"
 
-const SearchQueryResults = ({ rt, imbd }) => {
+const SearchQueryResults = () => {
   const { query } = useParams()
   const [searchResults, setSearchResults] = useState([])
 
@@ -28,7 +29,7 @@ const SearchQueryResults = ({ rt, imbd }) => {
   return (
     <div>
       <h2>Search Results for: {query}</h2>
-      <ul>
+      <div className="search-results">
         {searchResults.map((movie, i) => (
           <Card
             key={i}
@@ -37,7 +38,7 @@ const SearchQueryResults = ({ rt, imbd }) => {
             rt={`/Rottentom.svg`}
           />
         ))}
-      </ul>
+      </div>
     </div>
   )
 }
